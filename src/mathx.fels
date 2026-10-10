@@ -1,0 +1,15 @@
+// mathx: small helpers
+//
+
+// Limit x to the range lo..hi.
+pub clamp :: fn(x: i32, lo: i32, hi: i32) -> i32 {
+    if x < lo { return lo; }
+    if x > hi { return hi; }
+    return x;
+}
+
+
+// The value between a and b at t: t = 0.0 gives a, t = 1.0 gives b.
+pub lerp :: fn(a: f64, b: f64, t: f64) -> f64 {
+    return a + (b - a) * t;
+}
